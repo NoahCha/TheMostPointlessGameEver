@@ -1,10 +1,18 @@
 $(document).ready(function () {
-   
-
+    var p = ("<div class ='nextone'></div>");
+        var count = 0;
     $('.first').click(function () {
         $('.next').append('<p>How long can you make this page???');
     });
-    $('.reset').click(function() {
-        $('p').remove();
+    
+    $('.first').click(function () {
+        count++;
+        $('.count').text('NUMBER OF CLICKS:' + ' ' + count);
     });
+    $('.reset').click(function () {
+        $('p').remove();
+        count = 0;
+    });
+   
+    
 });
